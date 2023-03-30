@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -20,8 +17,10 @@ public class Main {
     public static void task2() {
         System.out.println("Task2:");
 
-        Set<Integer> nums = new HashSet<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
-        for (final var value : nums) {
+        List<Integer> nums = new ArrayList<>(List.of(8, 1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
+        Collections.sort(nums);
+        Set<Integer> uniqueNums = new HashSet<>();
+        for (final var value : uniqueNums) {
             if(value % 2 == 0)
                 System.out.print(value + " ");
         }
